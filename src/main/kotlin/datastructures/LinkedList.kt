@@ -13,6 +13,10 @@ class LinkedList<T> {
         return head
     }
 
+    fun getTail(): Node<T>? {
+        return tail
+    }
+
     fun append(item: T) {
         val newNode = Node(item)
 
