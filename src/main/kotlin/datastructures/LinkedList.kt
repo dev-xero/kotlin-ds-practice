@@ -9,7 +9,7 @@ class LinkedList<T> {
     private var tail: Node<T>? = null
     private var size = 0
 
-    fun addNode(item: T) {
+    fun append(item: T) {
         val newNode = Node(item)
 
         if (head == null) {

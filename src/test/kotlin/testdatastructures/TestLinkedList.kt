@@ -9,8 +9,8 @@ class TestLinkedList {
 
     @Test
     fun testLinkedListAdd() {
-        list.addNode(1)
-        list.addNode(2)
+        list.append(1)
+        list.append(2)
 
         assertTrue(list.getSize() == 2)
     }
