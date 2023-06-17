@@ -24,7 +24,14 @@ class TestLinkedList {
     fun testRemoveListNode() {
         list.removeNode()
 
-        assertTrue(list.getSize() == 1)
+        assertTrue(list.getSize() == 2)
+    }
+
+    @Test
+    fun testLinkedListPrepend() {
+        list.prepend(0)
+
+        assertTrue(list.getHead()?.item == 0)
     }
 
 }
