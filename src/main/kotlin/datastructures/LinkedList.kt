@@ -1,6 +1,6 @@
 package datastructures
 
-private class Node<T>(val item: T) {
+class Node<T>(val item: T) {
     var next: Node<T>? = null
 }
 
@@ -8,6 +8,10 @@ class LinkedList<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
     private var size = 0
+
+    fun getHead(): Node<T>? {
+        return head
+    }
 
     fun append(item: T) {
         val newNode = Node(item)
