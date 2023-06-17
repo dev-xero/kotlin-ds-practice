@@ -8,7 +8,7 @@ class TestLinkedList {
     private val list = LinkedList<Int>()
 
     @Test
-    fun testLinkedListAdd() {
+    fun testLinkedListAppend() {
         list.append(1)
         list.append(2)
 
