@@ -23,6 +23,22 @@ class LinkedList<T> {
         size += 1
     }
 
+    fun prepend(item: T) {
+        val newNode = Node(item)
+
+        if (head == null) {
+            head = newNode
+            tail = newNode
+        } else {
+            val oldHead = head
+
+            newNode.next = oldHead
+            head = newNode
+        }
+
+        size += 1
+    }
+
     fun removeNode(): T? {
         if (head != null) {
             val oldLastItem = tail?.item
