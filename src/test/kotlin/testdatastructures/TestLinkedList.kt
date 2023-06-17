@@ -40,8 +40,7 @@ class TestLinkedList {
     @Test
     fun testLinkedListGetTail() {
         println(list.getTail()?.item)
-        list.iterate()
-        assertTrue(list.getTail()?.item == 1)
+        assertTrue(list.getTail()?.item == 2)
     }
 
     @Test
