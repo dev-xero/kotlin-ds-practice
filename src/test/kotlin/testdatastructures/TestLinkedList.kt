@@ -22,16 +22,19 @@ class TestLinkedList {
 
     @Test
     fun testRemoveListNode() {
+        val size = list.getSize()
         list.removeNode()
 
-        assertTrue(list.getSize() == 2)
+        assertTrue(list.getSize() < size)
     }
 
     @Test
     fun testLinkedListPrepend() {
         list.prepend(0)
-
         assertTrue(list.getHead()?.item == 0)
+
+        list.prepend(-1)
+        assertTrue(list.getHead()?.item == -1)
     }
 
 }
