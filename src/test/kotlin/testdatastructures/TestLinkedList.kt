@@ -20,4 +20,11 @@ class TestLinkedList {
         list.iterateList()
     }
 
+    @Test
+    fun testRemoveListNode() {
+        list.removeNode()
+
+        assertTrue(list.getSize() == 1)
+    }
+
 }
