@@ -17,7 +17,7 @@ class TestLinkedList {
 
     @Test
     fun testIterateList() {
-        list.iterateList()
+        list.iterate()
     }
 
     @Test
@@ -35,6 +35,25 @@ class TestLinkedList {
 
         list.prepend(-1)
         assertTrue(list.getHead()?.item == -1)
+    }
+
+    @Test
+    fun testLinkedListGetTail() {
+        println(list.getTail()?.item)
+        list.iterate()
+        assertTrue(list.getTail()?.item == 1)
+    }
+
+    @Test
+    fun main() {
+        val testHead = LinkedList<Int>()
+        testHead.prepend(3)
+        testHead.prepend(2)
+        testHead.prepend(1)
+
+        testHead.removeNode()
+
+        testHead.iterate()
     }
 
 }

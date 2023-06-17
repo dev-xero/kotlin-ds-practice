@@ -48,12 +48,26 @@ class LinkedList<T> {
     }
 
     fun removeNode(): T? {
-        if (head != null) {
-            val oldLastItem = tail?.item
-            tail?.next = null
-            size -= 1
+        if (tail != null) {
+            val removedNodeItem = tail?.item
 
-            return oldLastItem
+            if (head == tail) {
+                head = null
+                tail = null
+                size = 0
+            } else {
+                var curr = head
+
+                while (curr?.next != tail) {
+                    curr = curr?.next
+                }
+
+                tail = curr
+                tail?.next = null
+                size -= 1
+            }
+
+            return removedNodeItem
         }
 
         return null
@@ -63,7 +77,7 @@ class LinkedList<T> {
         return size
     }
 
-    fun iterateList(): Boolean {
+    fun iterate(): Boolean {
         var curr = head
 
         while (curr != null) {
