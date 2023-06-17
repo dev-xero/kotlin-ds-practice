@@ -23,6 +23,17 @@ class LinkedList<T> {
         size += 1
     }
 
+    fun removeNode(): T? {
+        if (head != null) {
+            val oldLastItem = tail?.item
+            tail?.next = null
+
+            return oldLastItem
+        }
+
+        return null
+    }
+
     fun getSize(): Int {
         return size
     }
