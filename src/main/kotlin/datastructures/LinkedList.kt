@@ -27,6 +27,7 @@ class LinkedList<T> {
         if (head != null) {
             val oldLastItem = tail?.item
             tail?.next = null
+            size -= 1
 
             return oldLastItem
         }
