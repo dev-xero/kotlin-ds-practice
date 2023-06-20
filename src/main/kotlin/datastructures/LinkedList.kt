@@ -38,4 +38,20 @@ class LinkedList<T> {
         head = newHead
         return newHead
     }
+
+    fun addToTail(item: T): Node<T> {
+        val newTail: Node<T> = Node(item)
+        val currentTail: Node<T>? = tail
+
+        if (head == null) {
+            head = newTail
+            tail = newTail
+
+            return newTail
+        }
+
+        currentTail?.setNextNode(newTail)
+        tail = newTail
+        return head!!
+    }
 }
