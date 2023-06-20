@@ -63,4 +63,13 @@ class TestLinkedList {
 
         assertTrue(linkedList.headNode?.item == 1)
     }
+
+    @Test
+    fun testLinkedListTailIsCorrect() {
+        linkedList.addToHead(2)
+        linkedList.addToHead(1)
+        linkedList.addToTail(3)
+
+        assertTrue(linkedList.tailNode?.item == 3)
+    }
 }
