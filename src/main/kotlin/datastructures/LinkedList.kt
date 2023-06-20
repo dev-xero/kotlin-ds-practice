@@ -22,4 +22,20 @@ class LinkedList<T> {
     val tailNode: Node<T>?
         get() = tail
 
+
+    fun addToHead(item: T): Node<T> {
+        val newHead: Node<T> = Node(item)
+        val currentHead: Node<T>? = head
+
+        if (currentHead == null) {
+            head = newHead
+            tail = newHead
+
+            return newHead
+        }
+
+        newHead.setNextNode(currentHead)
+        head = newHead
+        return newHead
+    }
 }
