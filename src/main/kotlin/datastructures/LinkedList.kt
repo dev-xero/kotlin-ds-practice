@@ -33,12 +33,15 @@ class LinkedList<T> {
         if (currentHead == null) {
             head = newHead
             tail = newHead
+            listSize += 1
 
             return newHead
         }
 
         newHead.setNextNode(currentHead)
         head = newHead
+        listSize += 1
+
         return newHead
     }
 
@@ -49,12 +52,15 @@ class LinkedList<T> {
         if (head == null) {
             head = newTail
             tail = newTail
+            listSize += 1
 
             return newTail
         }
 
         currentTail?.setNextNode(newTail)
         tail = newTail
+        listSize += 1
+
         return newTail
     }
 
