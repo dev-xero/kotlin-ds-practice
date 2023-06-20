@@ -52,6 +52,6 @@ class LinkedList<T> {
 
         currentTail?.setNextNode(newTail)
         tail = newTail
-        return head!!
+        return newTail
     }
 }
