@@ -22,6 +22,9 @@ class LinkedList<T> {
     val tailNode: Node<T>?
         get() = tail
 
+    val isEmpty: Boolean
+        get() = head == null
+
 
     fun addToHead(item: T): Node<T> {
         val newHead: Node<T> = Node(item)
