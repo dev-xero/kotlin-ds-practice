@@ -2,6 +2,7 @@ name: Run Tests
 
 on:
   pull_request:
+    branches: [main]
     types:
       - opened
       - synchronized
@@ -20,4 +21,4 @@ jobs:
           java-version: 12
 
       - name: Build and Test
-        run: kotlin -classpath src tests.testdatastructures.TestLinkedListKt
+        run: kotlinc -classpath src tests.testdatastructures.TestLinkedListKt
