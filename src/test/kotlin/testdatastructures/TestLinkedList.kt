@@ -88,4 +88,17 @@ class TestLinkedList {
         assertTrue(linkedList.tailNode?.item == 4)
         assertTrue(linkedList.tailNode?.next == null)
     }
+
+    @Test
+    fun testLinkedListSizeUpdatesCorrectlyAfterRemoving() {
+        linkedList.addToTail(1)
+        linkedList.addToTail(2)
+
+        linkedList.removeItem(2)
+        assertTrue(linkedList.size == 1)
+
+        linkedList.removeItem(1)
+        println(linkedList.size)
+        assertTrue(linkedList.size == 0)
+    }
 }

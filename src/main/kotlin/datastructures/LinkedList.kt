@@ -3,7 +3,7 @@ package datastructures
 class Node<T>(val item: T) {
     var next: Node<T>? = null
 
-    fun setNextNode(item: Node<T>) {
+    fun setNextNode(item: Node<T>?) {
         next = item
     }
 }
@@ -66,17 +66,25 @@ class LinkedList<T> {
 
     fun removeItem(item: T): Node<T>? {
         var currentNode: Node<T>? = head
-        var nextNode: Node<T>? = currentNode?.next
 
-        while (nextNode != null) {
-            if (nextNode.item == item) {
-                currentNode?.setNextNode(nextNode.next!!)
+        if (currentNode != null && currentNode.item == item) {
+            head = currentNode.next
+            listSize -= 1
+
+            return currentNode
+        }
+
+        while (currentNode != null) {
+            val nextNode: Node<T>? = currentNode.next
+
+            if (nextNode != null && nextNode.item == item) {
+                currentNode.setNextNode(nextNode.next)
+                listSize -= 1
 
                 return nextNode
             }
 
             currentNode = nextNode
-            nextNode = nextNode.next
         }
 
         return null
