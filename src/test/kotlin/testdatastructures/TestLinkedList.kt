@@ -72,4 +72,20 @@ class TestLinkedList {
 
         assertTrue(linkedList.tailNode?.item == 3)
     }
+
+    @Test
+    fun testLinkedListPointsToCorrectNode() {
+        linkedList.addToTail(1)
+        linkedList.addToTail(2)
+        linkedList.addToTail(3)
+        linkedList.addToTail(4)
+
+        assertTrue(linkedList.headNode?.item == 1)
+        assertTrue(linkedList.headNode?.next?.item == 2)
+        assertTrue(linkedList.headNode?.next?.next?.item == 3)
+        assertTrue(linkedList.headNode?.next?.next?.next?.item == 4)
+        assertTrue(linkedList.headNode?.next?.next?.next?.next == null)
+        assertTrue(linkedList.tailNode?.item == 4)
+        assertTrue(linkedList.tailNode?.next == null)
+    }
 }
