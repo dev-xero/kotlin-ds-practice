@@ -103,4 +103,13 @@ class TestLinkedList {
         linkedList.addToTail(1)
         assertTrue(linkedList.size == 1)
     }
+
+    @Test
+    fun testContainsItemReturnsCorrectly() {
+        linkedList.addToTail(1)
+        linkedList.addToTail(2)
+
+        assertFalse(linkedList.contains(3))
+        assertTrue(linkedList.contains(2))
+    }
 }

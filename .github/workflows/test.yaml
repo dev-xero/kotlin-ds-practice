@@ -18,6 +18,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: 12
+          distribution: adopt
 
       - name: Build and Test
         run: kotlin -classpath src tests.testdatastructures.TestLinkedListKt
