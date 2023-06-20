@@ -98,7 +98,9 @@ class TestLinkedList {
         assertTrue(linkedList.size == 1)
 
         linkedList.removeItem(1)
-        println(linkedList.size)
         assertTrue(linkedList.size == 0)
+
+        linkedList.addToTail(1)
+        assertTrue(linkedList.size == 1)
     }
 }
